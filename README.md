@@ -32,4 +32,4 @@ ___
 Idk **I just love money** but not yet :money_with_wings: :money_with_wings:
 :money_with_wings:
 ___
-This is a test branch message
+This is a test branch message about the Game Jam Schedule:....
