@@ -1,20 +1,18 @@
 <!-- Headings -->
-# Flappy Chad
+# Game Jam
 
 ## Table of contents
 <!--  TOC  -->
-- [Flappy Chad](#flappy-chad)
+- [Game Jam Game](#game-jam-game)
   - [Table of contents](#table-of-contents)
-  - [What is Flappy Chad exactly?](#what-is-flappy-chad-exactly)
   - [Our plans](#our-plans)
   - [Money?](#money)
 
 ___
 
-## What is Flappy Chad exactly?
+## Game Jam Game
 
-Well, it's a recreation of Flappy Bird but instead of a bird we have a gigachad.
-We might include more features but I'm not sure about that yet.
+We're brainstorming it
 
 ___
 
