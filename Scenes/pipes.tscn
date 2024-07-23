@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://doh4lplsk2vg7"]
+
+[ext_resource type="Script" path="res://Scripts/pipes.gd" id="1_0q46r"]
+[ext_resource type="Texture2D" uid="uid://b4061ecraxkse" path="res://Assets/Sprites/Pipe.png" id="1_llufc"]
+[ext_resource type="PackedScene" uid="uid://blv8jm3g7bv28" path="res://Scenes/killzone.tscn" id="2_g87qt"]
+[ext_resource type="AudioStream" uid="uid://th318gd527k8" path="res://Assets/audio/point.wav" id="4_dc3wy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1fyj"]
+size = Vector2(22, 159)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7n6vn"]
+size = Vector2(4, 51)
+
+[node name="Pipes" type="Area2D"]
+script = ExtResource("1_0q46r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 102)
+texture = ExtResource("1_llufc")
+
+[node name="Killzone2" parent="Sprite2D" instance=ExtResource("2_g87qt")]
+position = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Killzone2"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_n1fyj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, -102)
+texture = ExtResource("1_llufc")
+flip_v = true
+
+[node name="Killzone" parent="Sprite2D2" instance=ExtResource("2_g87qt")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Killzone"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_n1fyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_7n6vn")
+
+[node name="Score" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dc3wy")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

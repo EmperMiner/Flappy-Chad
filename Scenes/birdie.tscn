@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://8rvgrp2v5ntg"]
+
+[ext_resource type="Script" path="res://Scripts/birdie.gd" id="1_5h55n"]
+[ext_resource type="Texture2D" uid="uid://djsquc8a8wr40" path="res://Assets/Sprites/Bird_01.png" id="1_fctq2"]
+[ext_resource type="Texture2D" uid="uid://biivrofbqllnw" path="res://Assets/Sprites/Bird_02.png" id="2_f64w4"]
+[ext_resource type="Texture2D" uid="uid://4wdocd0dncrh" path="res://Assets/Sprites/Bird_03.png" id="3_csabx"]
+[ext_resource type="AudioStream" uid="uid://biqc4rhw2chy0" path="res://Assets/audio/wing.ogg" id="5_uym52"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wumno"]
+radius = 6.32456
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2p25"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fctq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f64w4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_csabx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+light_mask = 2
+z_index = 5
+script = ExtResource("1_5h55n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wumno")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n2p25")
+autoplay = "default"
+
+[node name="Flap" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_uym52")
+bus = &"SFX"
