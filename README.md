@@ -1,5 +1,5 @@
 <!-- Headings -->
-# Flappy Chad
+# Flappy Chad (Flappy Bird made in Godot)
 
 ## Table of contents
 <!--  TOC  -->
@@ -13,14 +13,16 @@ ___
 
 ## What is Flappy Chad exactly?
 
-Well, it's a recreation of Flappy Bird but instead of a bird we have a gigachad.
-We might include more features but I'm not sure about that yet.
+~~Well, it's a recreation of Flappy Bird but instead of a bird we have a gigachad.~~
+~~We might include more features but I'm not sure about that yet.~~
+I repurposed it lol
 
 ___
 
 ## Our plans
 
 We want to create a small simple game that will get us notice by the public, that is it! (for now at least)
+Edit: Eldelnacho did mention us!
 
 > In the game jam, the goal is to be mentioned\
 > &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *EmperDev*
